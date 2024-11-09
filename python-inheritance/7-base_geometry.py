@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class BaseGeometry:
     def area(self):
         """Raises an exception if the method is not implemented."""
