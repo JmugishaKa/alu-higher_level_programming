@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Defines class BaseGeometry
+with public instance methods for area and integer validation"""
 
 class BaseGeometry:
     """
