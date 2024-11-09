@@ -1,49 +1,34 @@
 #!/usr/bin/python3
 """
-Defines the class BaseGeometry with public instance methods for:
-1. Raising an exception for area (intended to be implemented by subclasses).
-2. Validating that a value is a positive integer greater than 0.
+This module defines the BaseGeometry class.
 """
+
 
 class BaseGeometry:
     """
-    A base class for geometric shapes that provides methods for:
-    1. Raising an exception if the area method is not implemented.
-    2. Validating that a given value is an integer and greater than 0.
+    A class used to represent BaseGeometry
     """
-    
+
     def area(self):
         """
-        Raises an exception to indicate that the area method has not been 
-        implemented in this base class. Subclasses are expected to implement
-        the area method.
-
-        Raises:
-            Exception: Always raises an exception with the message 
-                       "area() is not implemented".
+        Raises an Exception with a message indicating that
+        area is not implemented.
         """
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
-        Validates that the value is a positive integer greater than 0.
+        Validates that `value` is an integer greater than 0.
 
-        Args:
-            name (str): The name of the parameter being validated.
+        Parameters:
+            name (str): The name of the variable.
             value (int): The value to validate.
 
         Raises:
-            TypeError: If 'value' is not an integer.
-            ValueError: If 'value' is less than or equal to 0.
-
-        Example:
-            >>> bg = BaseGeometry()
-            >>> bg.integer_validator("width", 5)  # No exception
-            >>> bg.integer_validator("width", -5)  # Raises ValueError
-            >>> bg.integer_validator("width", "five")  # Raises TypeError
+            TypeError: If `value` is not an integer.
+            ValueError: If `value` is less than or equal to 0.
         """
-        if not isinstance(value, int):
+        if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
-
