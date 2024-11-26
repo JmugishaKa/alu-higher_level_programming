@@ -1,10 +1,14 @@
-for attempt in range(3):  # Retry up to 3 times
-    try:
-        r = requests.get(url, timeout=5)
-        if r.status_code == 200:
-            text = "Ok"
-            break
-    except requests.exceptions.RequestException:
-        time.sleep(2)  # Wait 2 seconds before retrying
-        text = "Request failed after 3 attempts."
+#!/usr/bin/python3
+"""
+Script that fetches https://alu-intranet.hbtn.io/status
+"""
+import requests
+
+if __name__ == '__main__':
+    url = "https://alu-intranet.hbtn.io/status"
+    r = requests.get(url)
+    text = r.text
+    print("Body response:")
+    print("\t- type: {}".format(type(text)))
+    print("\t- content: {}".format(text))
 
