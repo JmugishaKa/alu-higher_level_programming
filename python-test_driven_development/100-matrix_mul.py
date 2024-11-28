@@ -2,8 +2,8 @@
 """Defines a matrix multiplication function."""
 '''
 File_name:
-Created: 5-DEC-2023
-Author: JOSHUA Mugisha
+Created: 25-Nov-2024
+Author: MUGISHA Joshua 
 Size: Large
 Project: python-test_driven_development
 Status: Not yet submitted.
@@ -50,7 +50,7 @@ def matrix_mul(m_a, m_b):
     if not all(len(row) == len(m_a[0]) for row in m_a):
         raise TypeError("each row of m_a must should be of the same size")
     if not all(len(row) == len(m_b[0]) for row in m_b):
-        raise TypeError("each row of m_b must be of the same size")
+        raise TypeError("each row of m_b must should be of the same size")
 
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
