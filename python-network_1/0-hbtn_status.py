@@ -12,5 +12,5 @@ if __name__ == "__main__":
         content = response.read()
         print("Body response:")
         print(f"    - type: {type(content)}")
-        print(f"    - content: {content}")
-        print(f"    - utf8 content: {content.decode('utf-8')}")
+        print(f"    - content: {content}")  # Show exact bytes fetched
+        print(f"    - utf8 content: {content.decode('utf-8')}") # Verify UTF-8 decoded content
