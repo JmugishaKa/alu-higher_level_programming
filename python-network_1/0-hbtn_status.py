@@ -6,9 +6,8 @@ and displays details about the response.
 
 from urllib import request
 
-url = "https://alu-intranet.hbtn.io/status"
-
 if __name__ == "__main__":
+    url = "https://alu-intranet.hbtn.io/status"
     with request.urlopen(url) as response:
         content = response.read()
         print("Body response:")
