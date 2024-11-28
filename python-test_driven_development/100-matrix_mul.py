@@ -3,7 +3,11 @@
 '''
 File_name:
 Created: 25-Nov-2024
+<<<<<<< HEAD
 Author: JOSHUA MUGISHA
+=======
+Author: MUGISHA Joshua 
+>>>>>>> 80c7151abaf06878ba3579d567b9cc1844a16366
 Size: Large
 Project: python-test_driven_development
 Status: Not yet submitted.
