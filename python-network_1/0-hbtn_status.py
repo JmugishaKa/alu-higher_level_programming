@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """Script that fetches https://intranet.hbtn.io/status."""
 
-if __name__ == '__main__':
     import urllib.request
     from urllib.error import HTTPError, URLError
-
+if __name__ == '__main__':
+    url = "https://intranet.hbtn.io/status"
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen('https://intranet.hbtn.io/status') as resp:
             content = resp.read()
