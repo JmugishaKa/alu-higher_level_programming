@@ -1,13 +1,5 @@
 #!/usr/bin/python3
-"""Defines a matrix multiplication function."""
-'''
-File_name:
-Created: 25-NOV-2023
-Author: MUGISHA Joshua
-Size: Large
-Project: python-test_driven_development
-Status: Not yet submitted.
-'''
+"""Define a matrix multiplication function."""
 
 
 def matrix_mul(m_a, m_b):
