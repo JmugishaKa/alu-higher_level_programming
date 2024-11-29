@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-"""Documented by Lsblack"""
-import urllib.request
+"""
+Fetches https://alu-intranet.hbtn.io/status using urllib and displays the response.
+"""
 
-url = 'https://intranet.hbtn.io/status'
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
-    '\n    AppleWebKit/537.36 (KHTML, like Gecko)'
-    '\n    Chrome/99.0.4844.84 Safari/537.36',
-}
+from urllib import request
 
-req = urllib.request.Request(url, headers=headers)
-with urllib.request.urlopen(req) as response:
-    content = response.read()
-    print("Body response:")
-    print("\t- type:", type(content))
-    print("\t- content:", content)
-    print("\t- utf8 content:", content.decode("utf-8"))
+if __name__ == "__main__":
+    url = "https://alu-intranet.hbtn.io/status"
+
+    with request.urlopen(url) as response:
+        content = response.read()
+        print("Body response:")
+        print(f"    - type: {type(content)}")
+        print(f"    - content: {content}")
+        print(f"    - utf8 content: {content.decode('utf-8')}")
+
