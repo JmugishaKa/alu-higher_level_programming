@@ -3,12 +3,8 @@
 
 if __name__ == '__main__':
     import urllib.request
-    from urllib.error import HTTPError
-    headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Wind64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-   "Referer": "https://intranet.htbn.io/",
-    }
-    req = request.Request(url, headers=headers)
+    from urllib.error import HTTPError, URLError
+
     try:
         with urllib.request.urlopen('https://intranet.hbtn.io/status') as resp:
             content = resp.read()
