@@ -20,5 +20,3 @@ if __name__ == '__main__':
         print("(78 chars long)")
         print("[stderr]: [Anything]")
         print("(0 chars long)")
-        if e.code == 403:
-            print("Access to the resource is forbidden.")
