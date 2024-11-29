@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-"""Fetch a url"""
-
+"""Fetches https://intranet.hbtn.io/status."""
 import requests
-    
-if __name__ == "__main__": 
-    headers = {
-'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-}
-response = requests.get("https://intranet.hbtn.io/status", headers=headers)
 
+
+if __name__ == "__main__":
+    r = requests.get("https://intranet.hbtn.io/status")
     print("Body response:")
-    print("\t- type: {}".format(type(response.text)))
-    print("\t- content: {}".format(response.text))
-    print("Response length:", len(response.text))
+    print("\t- type: {}".format(type(r.text)))
+    print("\t- content: {}".format(r.text))
